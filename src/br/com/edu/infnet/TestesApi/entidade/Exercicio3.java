@@ -21,14 +21,14 @@ public class Exercicio3 {
             System.out.println("Código de status: " + statusCode);
 
             InputStream inputStream = null;
-            String responseType = "Corpo da resposta (sucesso): "; // Mensagem padrão
+            String responseType = "Corpo da resposta: ";
 
             if (statusCode == HttpURLConnection.HTTP_NOT_FOUND) {
-                System.out.println("Mensagem: Entidade não encontrada conforme esperado (Status 404).");
+                System.out.println("Mensagem: Entidade não encontrada conforme esperado.");
                 inputStream = connection.getErrorStream();
                 responseType = "Corpo da resposta (erro): ";
             } else if (statusCode == HttpURLConnection.HTTP_OK) {
-                System.out.println("Mensagem: Entidade encontrada inesperadamente (Status 200 OK).");
+                System.out.println("Mensagem: Entidade encontrada inesperadamente.");
                 inputStream = connection.getInputStream();
             } else {
                 System.out.println("Mensagem: Código de status inesperado: " + statusCode);

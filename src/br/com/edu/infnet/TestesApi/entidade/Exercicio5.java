@@ -24,7 +24,7 @@ public class Exercicio5 {
             connection.setDoOutput(true);
 
             connection.setRequestProperty("Content-Type", "application/json");
-            connection.setRequestProperty("Accept", "application/json"); // Opcional, mas boa prática
+            connection.setRequestProperty("Accept", "application/json");
 
 
             try (DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream())) {
@@ -43,7 +43,7 @@ public class Exercicio5 {
                 inputStream = connection.getInputStream();
             } else {
                 inputStream = connection.getErrorStream();
-                responseTypeMessage = "Corpo da resposta (erro): ";
+                responseTypeMessage = "Corpo da resposta: ";
             }
 
             if (inputStream != null) {

@@ -29,7 +29,7 @@ public class Exercicio6 {
                 inputStream = connection.getInputStream();
             } else {
                 inputStream = connection.getErrorStream();
-                responseTypeMessage = "Corpo da resposta (erro): ";
+                responseTypeMessage = "Corpo da resposta: ";
             }
 
             if (inputStream != null) {
